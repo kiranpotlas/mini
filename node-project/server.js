@@ -1,3 +1,4 @@
+require('./src/models/connection');
 const express=require('express');
 const path=require('path');
 const bodyParser=require('body-parser');
@@ -7,9 +8,9 @@ var app=express();
 const port=3030;
 const host='127.0.0.1';
 //enable static data to make view folder visible and access
-app.use(express.static(path.join(__dirname,'/src/view')));
+// app.use(express.static(path.join(__dirname,'/src/view')));
 //unable url encoded data
-app.use(bodyParser.text());
+app.use(bodyParser.json());
 //use method, router module became middleware now
 app.use('/',homeRoutes);
 app.use('/',userRoutes);
@@ -21,12 +22,12 @@ app.use('/',userRoutes);
 //  app.get('/home',function(req,res,next){
 //     console.log(`Hit on`,req.url);
 //     res.send("This is the homepage");
-//     })
-    app.get('/pricing',function(req,res,next){
-        console.log();
+//      })
+//     app.get('/pricing',function(req,res,next){
+//         console.log();
         
-      res.sendFile(path.join(__dirname,'./src/view/pricing.html'));
-     })
+//       res.sendFile(path.join(__dirname,'./src/view/pricing.html'));
+//      })
    
 // app.get('/user',function(req,res,next){
 //     var user={

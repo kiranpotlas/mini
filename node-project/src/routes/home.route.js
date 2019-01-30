@@ -1,15 +1,10 @@
 const router=require('express').Router();
+const homeCtrl=require('../controllers/home.controller');
 // const path=require('path')
 router
 .route("/")
-.get(function(req,res,next){
-    console.log();
-    res.send('server is running');    
-})
+.get(homeCtrl.root)
 router
 .route("/home")
-.get(function(req,res,next){
-    console.log();
-res.send('This is the homepage');    
-})
+.get(homeCtrl.home)
 module.exports=router;
