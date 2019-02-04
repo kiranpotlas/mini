@@ -1,10 +1,11 @@
-const router=require('express').Router();
-const homeCtrl=require('../controllers/home.controller');
-// const path=require('path')
+const router = require('express').Router();
+const homeCtrl = require('../controllers/home.controller');
+
 router
 .route("/")
-.get(homeCtrl.root)
+.get(homeCtrl.root);
+
 router
-.route("/home")
-.get(homeCtrl.home)
-module.exports=router;
+.route('/home')
+.get(homeCtrl.home);
+module.exports = router;

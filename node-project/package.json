@@ -1,17 +1,22 @@
 {
   "name": "meanproject",
   "version": "1.0.0",
-  "description": "",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
     "test": "mocha"
   },
-  "author": "saikiran",
+  "author": "wk",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.18.3",
     "express": "^4.16.4",
-    "mongodb": "^3.1.13"
-  }
+    "mongodb": "^3.1.13",
+    "mongoose": "^5.4.8"
+  },
+  "devDependencies": {},
+  "keywords": [
+    "mocha"
+  ],
+  "description": ""
 }
